@@ -17,11 +17,11 @@ var slr = require('stream-line-reader');
 var reader = slr('https://s3.amazonaws.com/mediasmart-audiences/matrix-testing/mediasmart/8djtgid9yhypggydma5xfehhm.txt');
 
 reader.on('line', function (line, callback) {
-  console.log('Processing line:', line);
-  setTimeout(function () {
-    console.log('Line processed');
-    callback();
-  }, 1000 * Math.random());
+    console.log('Processing line:', line);
+    setTimeout(function () {
+        console.log('Line processed');
+        callback();
+    }, 1000 * Math.random());
 });
 
 reader.on('end', function (error) {
