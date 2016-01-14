@@ -18,7 +18,7 @@ var reader = slr('https://s3.amazonaws.com/mediasmart-audiences/matrix-testing/m
 
 reader.on('line', function (line, callback) {
     console.log('Processing line:', line);
-    setTimeout(function () {
+    setTimeout(function () { // This should be your async task
         console.log('Line processed');
         callback();
     }, 1000 * Math.random());
